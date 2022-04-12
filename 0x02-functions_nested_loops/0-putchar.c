@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "main.h"
+
 /**
  * main - prints the string _putchar
  * Return: 0 if all is well
