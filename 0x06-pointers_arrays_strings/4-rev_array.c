@@ -12,13 +12,10 @@ void reverse_array(int *a, int n)
 	int i;
 
 	i = 0;
-	while (i < n / 2)
+	for (int i = 0; i < n / 2; i++, n--)
 	{
 		elm_cpy = a[i];
 		a[i] = a[n - 1];
 		a[n - 1] = elm_cpy;
-
-		i++;
-		n--;
 	}
 }
