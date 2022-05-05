@@ -21,9 +21,9 @@ char *leet(char *s)
 		{
 			if (s[i] == l[j])
 				s[i] = n[j];
-			i++;
 			j++;
 		}
+		i++;
 	}
 
 	return (s);
