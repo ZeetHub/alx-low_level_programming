@@ -9,13 +9,14 @@
 void reverse_array(int *a, int n)
 {
 	int elm_cpy;
-	int i;
+	int i, j;
 
 	i = 0;
-	for (int i = 0; i < n / 2; i++, n--)
+	j = n-1
+	for (int i = 0; i < n / 2; i++, j--)
 	{
 		elm_cpy = a[i];
-		a[i] = a[n - 1];
-		a[n - 1] = elm_cpy;
+		a[i] = a[j];
+		a[j] = elm_cpy;
 	}
 }
