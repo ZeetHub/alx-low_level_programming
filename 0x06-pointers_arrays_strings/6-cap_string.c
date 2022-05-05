@@ -17,14 +17,14 @@ char *cap_string(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (i == 0 && s[i] >= '97' && s[i] <= '122')
+		if (i == 0 && s[i] >= 97 && s[i] <= 122)
 			s[i] -= 32;
 
 		for (j = 0; j < 13; j++)
 		{
 			if (s[i] == special_chars[j])
 			{
-				if (s[i + 1] >= '97' && s[i + 1] <= '122')
+				if (s[i + 1] >= 97 && s[i + 1] <= 122)
 					s[i + 1] -= 32;
 			}
 		}
