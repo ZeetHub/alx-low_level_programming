@@ -8,15 +8,21 @@
  * Return: a pointer to the first occurrence of the character
  * c in the string s, or NULL if the character is not found
  */
+
 char *_strchr(char *s, char c)
 {
-	char *chr;
+	int a;
 
-	chr = s;
-	while (*chr != c && *chr != '\0')
-		chr++;
-	if (*chr == c)
-		return (chr);
-	else if (*chr == '\0')
-		return (NULL);
+	while (1)
+	{
+		a = *s++;
+		if (a == c)
+		{
+			return (s - 1);
+		}
+		if (a == 0)
+		{
+			return (NULL);
+		}
+	}
 }
