@@ -11,13 +11,14 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int ctr;
-	int flag;
+	int flag, i, j;
 
 	ctr = 0;
-	for (int i = 0; s[i] != '\0'; i++)
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		flag = 0;
-		for (int j = 0; accept[j] != '\0'; j++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
@@ -28,4 +29,6 @@ unsigned int _strspn(char *s, char *accept)
 		if (flag == 0)
 			return (ctr);
 	}
+
+	return (ctr);
 }
