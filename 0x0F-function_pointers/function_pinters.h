@@ -1,6 +1,5 @@
-#ifndef FUNC_PTRT_H
-#define FUNC_PTR__H
-#include <stdlib.h>
+#ifndef _FUNC_PTR_H
+#define _FUNC_PTR_H
 
 void print_name(char *name, void (*f)(char *));
 void array_iterator(int *array, size_t size, void (*action)(int));
