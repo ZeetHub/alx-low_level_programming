@@ -1,5 +1,5 @@
-#ifndef _FUNC_PTR_H
-#define _FUNC_PTR_H
+#ifndef ALX_HEADER
+#define ALX_HEADER
 #include <stdlib.h>
 
 int _putchar(char c);
