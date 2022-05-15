@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strpbrk - searches a string for any of a set of bytes.
+ * _strpbrk - searches a string for any of a set of bytes.
  * @s: string to search for the occurence of a byte
  * @accept: string to match with s to find first occuring byte
  *
