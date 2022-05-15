@@ -9,15 +9,16 @@
 
 int num_digit(int num)
 {
-	int digits = 0;
+	int digits;
 
+	digits = 0;
 	if (num < 0)
 		num *= -1;
 	if (num == 0)
 		digits = 1;
 	else
 	{
-		while (num > 0 && (num / 10) >= 0)
+		while (num > 0 && ((num / 10) >= 0))
 		{
 			num /= 10;
 			digits++;
@@ -35,9 +36,11 @@ int num_digit(int num)
 
 int pwr(int y)
 {
-	int p = 1;
-	int i = 0;
+	int p;
+	int i;
 
+	p = 1;
+	i = 0;
 	while (i < y)
 	{
 		p *= 10;
@@ -55,9 +58,10 @@ int pwr(int y)
 
 void print_number(int n)
 {
-	int digits = 0, i = 1, div;
-	char ch;
+	int digits, i, div;
 
+	char ch;
+	i = 1;
 	digits = num_digit(n);
 
 	if (n < 0)
@@ -70,7 +74,7 @@ void print_number(int n)
 		if (i < digits)
 		{
 			div = n / (pwr(digits - i));
-			n = n - div * pwr((digits - i));
+			n = n - div * (pwr(digits - i));
 		}
 		else
 			div = n % 10;
