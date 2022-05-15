@@ -1,5 +1,42 @@
 #include "main.h"
 
+
+/**
+ * print_number - prints an integer.
+ * @n: integer to be printed
+ *
+ * Return: nothing
+ */
+
+void print_number(int n)
+{
+	int digits, i, div;
+	char ch;
+
+	i = 1;
+	digits = num_digit(n);
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n *= -1;
+	}
+	while (i <= digits)
+	{
+		if (i < digits)
+		{
+			div = n / (pwr(digits - i));
+			n = n - div * (pwr(digits - i));
+		}
+		else
+			div = n % 10;
+
+		ch = div + '0';
+		_putchar(ch);
+		i++;
+	}
+}
+
 /**
  * num_digit - finds the number of digits of an integer
  * @num: number whose number of digits is to be found
@@ -46,40 +83,3 @@ int pwr(int y)
 	}
 	return (p);
 }
-
-/**
- * print_number - prints an integer.
- * @n: integer to be printed
- *
- * Return: nothing
- */
-
-void print_number(int n)
-{
-	int digits, i, div;
-	char ch;
-
-	i = 1;
-	digits = num_digit(n);
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-	while (i <= digits)
-	{
-		if (i < digits)
-		{
-			div = n / (pwr(digits - i));
-			n = n - div * (pwr(digits - i));
-		}
-		else
-			div = n % 10;
-
-		ch = div + '0';
-		_putchar(ch);
-		i++;
-	}
-}
-
