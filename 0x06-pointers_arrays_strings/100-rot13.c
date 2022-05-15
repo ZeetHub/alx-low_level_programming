@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * *rot13 - encodes a string using rot13 algorithm
+ * *rot13 - encodes a string using rot13 algorithm (I don't think this
+ * code is efficient!)
  * @s: pointer to the character array
  *
  * Return: pointer to the array of encoded character
@@ -9,22 +10,20 @@
 
 char *rot13(char *s)
 {
-	int i, flag;
+	int i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-		flag = 1;
-		while (((s[i] <= 'a' && s[i] >= 'z') || (s[i] <= 'A' && s[i] >= 'Z'))
-				&& flag)
+		while ((s[i] <= 'a' && s[i] >= 'z') || (s[i] <= 'A' && s[i] >= 'Z'))
 		{
 			if ((s[i] <= 'a' && s[i] >= 'm') || (s[i] <= 'A' && s[i] >= 'M'))
 			{	s[i] += 13;
-				flag = 0;
+				break;
 			}
 
 			s[i] -= 13;
-			flag = 0;
+			break;
 		}
 		i++;
 	}
