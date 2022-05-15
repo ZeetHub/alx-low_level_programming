@@ -12,7 +12,7 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 char *rot13(char *);
-int num_digit(nt num);
+int num_digit(int num);
 int pwr(int y);
 void print_number(int n);
 
