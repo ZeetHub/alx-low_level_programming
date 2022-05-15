@@ -36,12 +36,12 @@ void print_number(int n)
 	{
 		if (i < digits)
 		{
-			div = n / (pow(10,(digits-i)));
-			n = n - div * pow(10,(digits - i));
+			div = n / (pow(10, (digits - i)));
+			n = n - div * pow(10, (digits - i));
 		}
 		else
 			div = n % 10;
-		
+
 		ch = div + '0';
 		putchar(ch);
 		i++;
