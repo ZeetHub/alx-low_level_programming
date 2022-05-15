@@ -59,10 +59,9 @@ int pwr(int y)
 void print_number(int n)
 {
 	int digits, i, div;
-
 	char ch;
-	i = 1;
 
+	i = 1;
 	digits = num_digit(n);
 
 	if (n < 0)
