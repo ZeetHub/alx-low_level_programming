@@ -83,5 +83,6 @@ void print_number(int n)
 		_putchar(ch);
 		i++;
 	}
+	_putchar('\n');
 }
 
