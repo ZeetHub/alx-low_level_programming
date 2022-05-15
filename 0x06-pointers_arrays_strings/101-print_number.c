@@ -62,6 +62,7 @@ void print_number(int n)
 
 	char ch;
 	i = 1;
+
 	digits = num_digit(n);
 
 	if (n < 0)
