@@ -62,7 +62,7 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n *= -1;
 	}
 	while (i <= digits)
@@ -76,7 +76,7 @@ void print_number(int n)
 			div = n % 10;
 
 		ch = div + '0';
-		_putchar(ch);
+		putchar(ch);
 		i++;
 	}
 }
