@@ -77,7 +77,7 @@ void print_number(int n)
 
 		ch = div + '0';
 		putchar(ch);
-		i++
+		i++;
 	}
 }
 
