@@ -46,5 +46,4 @@ void print_number(int n)
 		putchar(ch);
 		i++;
 	}
-	putchar('\n');
 }
