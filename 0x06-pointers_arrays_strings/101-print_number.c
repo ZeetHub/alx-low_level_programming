@@ -12,13 +12,11 @@ int num_digit(int num)
 	int digits;
 
 	digits = 0;
-	if (num < 0)
-		num *= -1;
 	if (num == 0)
 		digits = 1;
 	else
 	{
-		while (num > 0 && ((num / 10) >= 0))
+		while (num != 0)
 		{
 			num /= 10;
 			digits++;
