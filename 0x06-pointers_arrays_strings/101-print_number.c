@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * print_number - prints an integer
@@ -8,24 +7,44 @@
  * Return: nothing
  */
 
-void print_number(int n)
+int num_digit (int n)
 {
-	int digits = 0, num, i = 1, div;
-	char ch;
+	int digits = 0;
 
-	num = n;
-	if (num < 0)
-		num *= -1;
-	if (num == 0)
+	if (n < 0)
+		n *= -1;
+	if (n == 0)
 		digits = 1;
 	else
 	{
-		while (num > 0 && (num / 10) >= 0)
+		while (n > 0 && (n / 10) >= 0)
 		{
-			num /= 10;
+			n /= 10;
 			digits++;
 		}
 	}
+	return digits;
+}
+
+int pwr(int x, int y)
+{
+	int p = 1;
+	int i = 0;
+
+	while (i < y)
+	{
+		p *= 10;
+		i++;
+	}
+	return p;
+}
+
+void print_number(int n)
+{
+	int digits = 0, i = 1, div;
+	char ch;
+
+	digits = num_digit(n);
 
 	if (n < 0)
 	{
@@ -36,8 +55,8 @@ void print_number(int n)
 	{
 		if (i < digits)
 		{
-			div = n / (pow(10, (digits - i)));
-			n = n - div * pow(10, (digits - i));
+			div = n / (pwr(10, (digits - i)));
+			n = n - div * pwr(10, (digits - i));
 		}
 		else
 			div = n % 10;
